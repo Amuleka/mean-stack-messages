@@ -6,7 +6,7 @@ const Post = require('./models/post');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://<putyourusername>:<putyourpassword>.,@cluster0.miqj5ux.mongodb.net/new-project')
+mongoose.connect('mongodb+srv://<putyourusername>:<putyourpassword>.,@cluster0.miqj5ux.mongodb.net/<putyourcollectionname>')
 .then(() =>  {
   console.log('Connected to Database!')
 })
