@@ -6,7 +6,7 @@ const Post = require('./models/post');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://demo:Startele21.,@cluster0.miqj5ux.mongodb.net/new-project')
+mongoose.connect('mongodb+srv://<putyourusername>:<putyourpassword>.,@cluster0.miqj5ux.mongodb.net/new-project')
 .then(() =>  {
   console.log('Connected to Database!')
 })
@@ -32,7 +32,7 @@ app.post('/api/posts', (req, res, next) => {
   post.save().then(result => {
     res.status(201).json({
       message: 'Post added successfully',
-      postId: createdPost._id
+      // postId: createdPost._id
     });
   });
 });
